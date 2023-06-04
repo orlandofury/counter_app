@@ -32,17 +32,41 @@ class _CounterScreenState extends State<CounterScreen> {
           ],
         ),
       ), 
-      //floatingActionButtonLocation: FloatingActionButtonLocation.miniCenterFloat,
-      floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.add),
-          onPressed: () { 
-              print('Hola boton: $counter');
-              counter++;
-              setState(() {
-                
-              });
-          },
-       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          FloatingActionButton(
+            child: const Icon(Icons.exposure_plus_1_outlined),
+              onPressed: () { 
+                  counter++;
+                  setState(() {
+                    
+                  });
+              },
+           ),
+           //const SizedBox(width: 20),
+           FloatingActionButton(
+            child: const Icon(Icons.restore),
+              onPressed: () { 
+                  counter=0;
+                  setState(() {
+                    
+                  });
+              },
+           ),
+           //const SizedBox(width: 20),
+           FloatingActionButton(
+            child: const Icon(Icons.exposure_minus_1_outlined),
+              onPressed: () { 
+                  counter--;
+                  setState(() {
+                    
+                  });
+              },
+           ),
+        ],
+      ),
     );
   }
 }
