@@ -28,7 +28,7 @@ class HomeScreen extends StatelessWidget{
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),
           onPressed: () { 
-              print('Hola boton: $counter');
+              //print('Hola boton: $counter');
               counter++;
           },
        ),
